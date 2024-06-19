@@ -1,2 +1,2 @@
 # lauwebsite.github.io
-<img src= "copia de photo_website.png" width='300'/>
+<img src= "Copia de Photo_website.png" width='300'/>
