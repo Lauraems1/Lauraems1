@@ -1,0 +1,93 @@
+<html>
+  <head> 
+    <title>Laura Webpage Project Eye Movement</title>
+    <style>
+      nav {
+grid-column: 1 / 7;
+background-color: cadetblue;
+padding: 10px 0;
+text-align: center;
+}
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display:flex;
+justify-content: center;
+}
+nav ul li {
+margin: 0 10px;
+}
+nav ul li a {
+color: BurlyWood;
+text-decoration: none;
+font-weight: bold;
+padding: 10px 15px;
+display: block;
+}
+nav ul li a:hover {
+color: pink;
+}
+nav ul ul {
+display: none;
+position: absolute;
+background-color: cadetblue;
+border-top: 2px solid BurlyWood;
+z-index: 1;
+}
+nav ul li:hover > ul {
+display: block;
+}
+nav ul ul li {
+display: block;
+width: 200px;
+text-align: left;
+}
+nav ul ul li a {
+padding: 10px 15px;
+color: BurlyWood;
+}
+nav ul ul li a:hover {
+background-color: pink;
+color: cadetblue;
+}
+    </style>
+  </head>
+  <link rel="stylesheet" href="./eyes.css" />
+  <body>
+    <nav>
+      <ul>
+          <li><a href="finalExercise_webpage_1.html">Home</a></li>
+          <li>
+              <a href="#">Projects</a>
+              <ul>
+                  <li><a href="finalExercise_projects_1.html">3 Projects</a></li>
+                  <li><a href="eyes.html">Eyes Movement</a></li>
+                  <li><a href="packmen_1.html">PackMen</a></li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+    <div class="eyes">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = () => {
+      var x = (event.clientX * 100) / window.innerWidth + "%";
+      var y = (event.clientY * 100) / window.innerHeight + "%";
+
+      for (let i = 0; i < 2; i++) {
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+      }
+    };
+  </script>
+</html>
