@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Laura Webpage Project PacMen</title>
+    <style>
+        nav {
+grid-column: 1 / 7;
+background-color: cadetblue;
+padding: 10px 0;
+text-align: center;
+}
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display:flex;
+justify-content: center;
+}
+nav ul li {
+margin: 0 10px;
+}
+nav ul li a {
+color: BurlyWood;
+text-decoration: none;
+font-weight: bold;
+padding: 10px 15px;
+display: block;
+}
+nav ul li a:hover {
+color: pink;
+}
+nav ul ul {
+display: none;
+position: absolute;
+background-color: cadetblue;
+border-top: 2px solid BurlyWood;
+z-index: 1;
+}
+nav ul li:hover > ul {
+display: block;
+}
+nav ul ul li {
+display: block;
+width: 200px;
+text-align: left;
+}
+nav ul ul li a {
+padding: 10px 15px;
+color: BurlyWood;
+}
+nav ul ul li a:hover {
+background-color: pink;
+color: cadetblue;
+}
+</style>
+</head>   
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Projects</a>
+                <ul>
+                    <li><a href="finalExercise_projects_1.html">3 Projects</a></li>
+                    <li><a href="eyes.html">Eyes Movement</a></li>
+                    <li><a href="pacmen_1.html">PacMen</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <div id='game'>
+        <button onclick='makeOne()' width='200' height='30'>Add PacMan</button>
+        <button onclick='update()' width='200' height='30'>Start Game</button>
+
+    </div>
+
+</body>
+<script src="pacmen.js"></script>
+</html>
